@@ -1,0 +1,14 @@
+First , Run npm init to create new project node-js
+
+#installing express
+npm i express --save
+
+#installing nodemode
+Nodemon restarts the server automatically when you save a file that’s used by the server.js. We can install Nodemon with the following command:
+We can make things simpler by adding  script key in the package.json file. This lets us run nodemon server.js
+"scripts": {
+    "dev": "nodemon server.js"
+  }
+
+npm i nodemon --save
+to run : npm run dev , and for resresh used : rs+enter

@@ -1,0 +1,27 @@
+{
+  "name": "matadeveloper",
+  "version": "1.0.0",
+  "description": "Practice Express JS, Squelize, Elastic Search, Socket IO, Database Mysql",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev" : "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matadeveloper/node-js.git"
+  },
+  "keywords": [
+    "node-js"
+  ],
+  "author": "Kharisma Maulana Pasaribu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matadeveloper/node-js/issues"
+  },
+  "homepage": "https://github.com/matadeveloper/node-js#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
