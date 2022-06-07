@@ -3,7 +3,7 @@ First , Run npm init to create new project node-js
 #installing express
 npm i express --save
 
-#installing nodemode
+#installing nodemone
 Nodemon restarts the server automatically when you save a file that’s used by the server.js. We can install Nodemon with the following command:
 We can make things simpler by adding  script key in the package.json file. This lets us run nodemon server.js
 "scripts": {
@@ -12,3 +12,47 @@ We can make things simpler by adding  script key in the package.json file. This 
 
 npm i nodemon --save
 to run : npm run dev , and for resresh used : rs+enter
+
+#installing body-parser
+Body-parser is a middleware. They help to tidy up the request object before we use them. Express lets us use middleware with the use method
+https://www.npmjs.com/package/body-parser
+npm install body-parser --save
+
+#installing eslint
+ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. In many ways, it is similar to JSLint and JSHint with a few exceptions:
+https://www.npmjs.com/package/eslint#filing-issues
+
+npm i eslint --save-dev
+You should then set up a configuration file:
+npm init @eslint/config
+After that, you can run ESLint on any file or directory like this:
+./node_modules/.bin/eslint yourfile.js
+
+
+#Installing dotenv
+Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology
+https://www.npmjs.com/package/dotenv
+npm i dotenv --save
+
+#Installing Morgan (Middleware)
+Create a new morgan logger middleware function using the given format and options. The format argument may be a string of a predefined name (see below for the names), a string of a format string, or a function that will produce a log entry.
+https://www.npmjs.com/package/morgan
+npm i morga --save
+
+#Installing jsonwebtoken
+https://www.npmjs.com/package/jsonwebtoken
+npm i jsonwebtoken --save
+
+
+#Installing Module-alias
+Create aliases of directories and register custom module paths in NodeJS like a boss!
+https://www.npmjs.com/package/module-alias
+npm i --save module-alias
+
+
+#Installing EJS
+npm i ejs --save
+
+#Installing Babel
+babel-node is a CLI that works exactly the same as the Node.js CLI, with the added benefit of compiling with Babel presets and plugins before running it.
+npm install --save-dev @babel/core @babel/node
