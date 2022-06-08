@@ -4,13 +4,13 @@
  * Website : www.matadeveloper.com
  * Email   : kharismamaulana1@gmail.com
 */
-
-const {Module} = require("./module")
+require('module-alias/register') // register all module alias
+const {Module} = require("configs/module")
 const mod = new Module();
 
 class customMessage {
     constructor(res){
-        this.respons = res
+        this.response = res
         this.events = mod.event()
     }
     success(statusCode, message){

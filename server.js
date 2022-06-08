@@ -4,7 +4,7 @@
  * Website : www.matadeveloper.com
  * Email   : kharismamaulana1@gmail.com
 */
-require('module-alias/register')
+require('module-alias/register') // register all module alias
 const cluster = require('cluster')
 const express = require('express')
 const os = require('os')
@@ -28,11 +28,15 @@ class App extends Route{
                 cluster.fork()
             }
             cluster.on('online', (worker) => {
-                if (worker.isConnected()) console.log(`worker is active ${worker.process.pid}`)
+                if (worker.isConnected()) {
+                    // console.log(`worker is active ${worker.process.pid}`)
+                }else{
+                    console.log(`worker is not active ${worker.process.pid}`)
+                }
             })
         
             cluster.on('exit', (worker) => {
-                if (worker.isDead()) console.log(`worker is dead ${worker.process.pid}`)
+                // if (worker.isDead()) console.log(`worker is dead ${worker.process.pid}`)
                 cluster.fork()
             })
         } else {
@@ -51,7 +55,7 @@ class App extends Route{
             app.set('view engine', 'ejs');
             // listenint server port
             http.createServer(app).listen(process.env.PORT)
-            console.log('Listen Port '+process.env.PORT)
+            // console.log('Listen Port '+process.env.PORT)
         }
     }
 }

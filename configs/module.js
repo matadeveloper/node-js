@@ -4,14 +4,16 @@
  * Website : www.matadeveloper.com
  * Email   : kharismamaulana1@gmail.com
 */
-const express      = require("express")
-const dotenv       = require("dotenv")
-const bodyParser   = require("body-parser")
-const logger       = require("morgan")
-const jsonwebtoken = require("jsonwebtoken")
-const events       = require("events")
+const express          = require("express")
+const dotenv           = require("dotenv")
+const bodyParser       = require("body-parser")
+const logger           = require("morgan")
+const jsonwebtoken     = require("jsonwebtoken")
+const events           = require("events")
 const { EventEmitter } = require("stream")
-const path = require("path")
+const path             = require("path")
+const Sequelize        = require("sequelize")
+const cors             = require("cors")
 
 class Module {
     constructor(app){
@@ -39,9 +41,16 @@ class Module {
     jwt(){
         return jsonwebtoken
     }
+    cors(){
+        const {app} = this
+        app.use(cors())
+    }
     assets(){
         const {app} = this
         app.use(express.static(path.resolve(process.cwd(),'public/assets')))
+    }
+    sequelize(){
+        return Sequelize
     }
 }
 

@@ -1,7 +1,13 @@
 First , Run npm init to create new project node-js
 
 #installing express
+express is framewor for nodejs
 npm i express --save
+
+#Installing cors
+CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.
+https://expressjs.com/en/resources/middleware/cors.html
+npm i cors --save
 
 #installing nodemone
 Nodemon restarts the server automatically when you save a file that’s used by the server.js. We can install Nodemon with the following command:
@@ -51,9 +57,16 @@ npm i --save module-alias
 
 
 #Installing EJS
+engine html in nodejs
 npm i ejs --save
 
 #Installing Babel
 babel-node is a CLI that works exactly the same as the Node.js CLI, with the added benefit of compiling with Babel presets and plugins before running it.
 https://babeljs.io/docs/en/babel-node
 npm install --save-dev @babel/core @babel/node
+
+
+#Installing Squelize
+MVC Database with builder
+https://sequelize.org/docs/v6/getting-started/
+npm install --save sequelize

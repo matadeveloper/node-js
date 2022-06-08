@@ -1,0 +1,21 @@
+constructor merupakan data yang diolah pertama kali di dalam function , contoh pengunaan constructor di php
+class Fruit {
+  public $name;
+  public $color;
+
+  function __construct($name) {
+    $this->name = $name;
+  }
+  function get_name() {
+    return $this->name;
+  }
+}
+
+class classname {
+  constructor(parameter) {
+    this.classes = parameter;
+  }
+}
+
+myvalue = new class_name("GeeksforGeeks");
+document.getElementById("demo").innerHTML = myvalue.classes;

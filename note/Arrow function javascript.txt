@@ -1,0 +1,23 @@
+Ref : https://www.geeksforgeeks.org/what-is-the-arrow-function-and-how-to-create-it/?ref=lbp
+
+Using normal function:
+---------------------------------------------------------------
+
+<script>
+function myFunction(){
+  let a = 5, b = 4;
+  return a+b;
+}
+console.log(myFunction());
+</script>
+
+
+Using arrow function:
+---------------------------------------------------------------
+<script>
+const myFunction = () =>{
+  let a = 5, b = 4;
+  return a+b;
+}
+console.log(myFunction());
+</script>

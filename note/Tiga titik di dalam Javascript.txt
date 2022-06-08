@@ -1,0 +1,18 @@
+Ref : https://medium.com/@irsansebastian/tiga-titik-didalam-javascript-d30fc8888722
+
+Selama kurang lebih satu tahun mempelajari Javascript, ada begitu banyak syntax atau teknik yang bisa kita gunakan dengan tujuan mempermudah Engineer dalam memodifikasi data, ada dua teknik yang paling menarik dan unik bagi saya. adalah Spread syntax & Rest Parameters
+
+Spread Syntax
+Tiga titik misterius yang mungkin pernah anda lihat di dalam Javascript, itu tidak selalu merupakan Rest Parameters karena ada teknik yang dinamakan Spread Syntax yang juga mengunakan tiga titik dalam penulisan kodenya
+const alfabet = ['a','b','c'];
+
+const hurufD = 'd';
+
+const newAlfabet = [...alfabet, hurufD];
+
+console.log(alfabet, 'Sebelum Penambahan '); // ["a", "b", "c"]
+console.log(newAlfabet, 'Sesudah Penambahan '); // ["a", "b", "c", "d"]
+
+Dari potongan kode sederhana diata kita bisa melihat bahwa, variable alfabet memiliki huruf a, b, dan c. lalu dengan variable baru newAlfabet yang mana kita menambahkan tiga titik didepan variable alfabet serta variable hurufD maka Spread Syntax bekerja. seperti meng-copy paste seluruh variable yang ada didalam variable alfabet ke dalam variable newAlfabet.
+
+tentu urutan posisi Spread Syntax mempengaruhi urutan posisi didalam array, jadi apabila variable hurufD diletakan didepan maka hasilny akan berbeda
