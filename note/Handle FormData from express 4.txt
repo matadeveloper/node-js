@@ -1,0 +1,16 @@
+Ref : https://stackoverflow.com/questions/37630419/how-to-handle-formdata-from-express-4
+
+body-parser doesn't handle multipart bodies, which is what FormData is submitted as.
+
+Instead, use a module like multer.
+
+For example, to retrieve the (regular) fields of a request:
+
+const multer = require('multer');
+const upload = multer();
+
+app.post('/send', upload.none(), (req, res) => {
+  const formData = req.body;
+  console.log('form data', formData);
+  res.sendStatus(200);
+});

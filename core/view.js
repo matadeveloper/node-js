@@ -4,7 +4,7 @@
  * Website : www.matadeveloper.com
  * Email   : kharismamaulana1@gmail.com
 */
-
+'use strict';
 const { resolve } = require('path')
 
 

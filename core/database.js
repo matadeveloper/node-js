@@ -5,17 +5,19 @@
  * Email   : kharismamaulana1@gmail.com
 */
  // register module alias
+'use strict';
 require('module-alias/register')
 const {Module} = require('configs/module')
 const databaseConfig = require('configs/database_config')
 
 const mod = new Module()
-const Sequelize = mod.sequelize()
+const { Sequelize, Model, DataTypes } = mod.sequelize()
 
 const sequelizeInstance = new Sequelize(databaseConfig.DB,databaseConfig.USER, databaseConfig.PASSWORD,{
     host: databaseConfig.HOST,
     dialect: databaseConfig.dialect,
     operatorsAliases: 0,
+    timezone: databaseConfig.timezone, // setting timezone for builder
     pool: {
         max: databaseConfig.pool.max,
         min: databaseConfig.pool.min,
@@ -37,6 +39,6 @@ const db = {}
 db.Sequelize = Sequelize
 db.sequelize = sequelizeInstance
 /* init table to database */
-db.user = require("models/user")(sequelizeInstance, Sequelize);
+db.user = require("models/user")(sequelizeInstance, Sequelize, Model, DataTypes);
 
 module.exports = db

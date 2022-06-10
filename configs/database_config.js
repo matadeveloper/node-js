@@ -4,13 +4,14 @@
  * Website : www.matadeveloper.com
  * Email   : kharismamaulana1@gmail.com
 */
-
+'use strict';
 module.exports = {
     HOST: "localhost",
     USER: "root",
     PASSWORD: "",
     DB: "node_js",
     dialect: "mysql",
+    timezone: "Asia/Jakarta",
     pool: {//pool configuration
         max: 5,//maximum number of connection in pool
         min: 0,//minimum number of connection in pool

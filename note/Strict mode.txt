@@ -1,0 +1,8 @@
+Ref : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+
+Strict mode for scripts
+To invoke strict mode for an entire script, put the exact statement "use strict"; (or 'use strict';) before any other statements.
+
+// Whole-script strict mode syntax
+'use strict';
+var v = "Hi! I'm a strict mode script!";

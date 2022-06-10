@@ -1,3 +1,5 @@
+https://nodejs.dev/learn/how-much-javascript-do-you-need-to-know-to-use-nodejs
+https://javascript.info/async-await
 First , Run npm init to create new project node-js
 
 #installing express
@@ -9,7 +11,7 @@ CORS is a node.js package for providing a Connect/Express middleware that can be
 https://expressjs.com/en/resources/middleware/cors.html
 npm i cors --save
 
-#installing nodemone
+#installing nodemon
 Nodemon restarts the server automatically when you save a file that’s used by the server.js. We can install Nodemon with the following command:
 We can make things simpler by adding  script key in the package.json file. This lets us run nodemon server.js
 "scripts": {
@@ -34,7 +36,6 @@ npm init @eslint/config
 After that, you can run ESLint on any file or directory like this:
 ./node_modules/.bin/eslint yourfile.js
 
-
 #Installing dotenv
 Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology
 https://www.npmjs.com/package/dotenv
@@ -49,12 +50,10 @@ npm i morga --save
 https://www.npmjs.com/package/jsonwebtoken
 npm i jsonwebtoken --save
 
-
 #Installing Module-alias
 Create aliases of directories and register custom module paths in NodeJS like a boss!
 https://www.npmjs.com/package/module-alias
 npm i --save module-alias
-
 
 #Installing EJS
 engine html in nodejs
@@ -70,3 +69,54 @@ npm install --save-dev @babel/core @babel/node
 MVC Database with builder
 https://sequelize.org/docs/v6/getting-started/
 npm install --save sequelize
+
+
+#Installing multer
+Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
+NOTE: Multer will not process any form which is not multipart (multipart/form-data).
+Installation
+$ npm install --save multer
+
+
+#Installation node-datetime
+An extended Date object for javascript.
+- Handles offests by days and hours.
+- Built-in formatting function. 
+- Time based value calculation.
+https://www.npmjs.com/package/node-datetime
+Installing
+npm i node-datetime --save
+
+
+#Installing Graphql
+Create a GraphQL HTTP server with any HTTP web framework that supports connect styled middleware, including Connect itself, Express and Restify.
+npm install --save express-graphql
+https://devsaurus.com/graphql
+https://graphql.org/graphql-js/running-an-express-graphql-server/
+npm install express-graphql graphql --save
+
+#Installation set-tz
+Setting time-zone 3rd for node-js
+npm i set-tz @types/set-tz
+
+#Installation axios
+Axios is a promise-based HTTP Client for node.js and the browser. 
+It is isomorphic (= it can run in the browser and nodejs with the same codebase). 
+On the server-side it uses the native node.js http module, while on the client (browser) it uses XMLHttpRequests.
+https://axios-http.com/docs/intro
+Installing
+npm install axios -- save
+
+
+#Installation sharp
+The typical use case for this high speed Node.js module is to convert large images in common formats to smaller, web-friendly JPEG, PNG, WebP, GIF and AVIF images of varying dimensions
+https://www.npmjs.com/package/sharp
+install
+npm install sharp --save
+
+
+#Installation uuid
+For the creation of RFC4122 UUIDs
+https://www.npmjs.com/package/uuid
+install
+npm install uuid --save

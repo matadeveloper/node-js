@@ -1,0 +1,66 @@
+Expressions and operators
+---------------------------------------------------------------------------------------
+This chapter documents all the JavaScript language operators, expressions and keywords.
+
+Expressions and operators by category
+For an alphabetical listing see the sidebar on the left.
+
+Primary expressions
+Basic keywords and general expressions in JavaScript.
+
+this
+The this keyword refers to a special property of an execution context.
+
+function
+The function keyword defines a function expression.
+
+class
+The class keyword defines a class expression.
+
+function*
+The function* keyword defines a generator function expression.
+
+yield
+Pause and resume a generator function.
+
+yield*
+Delegate to another generator function or iterable object.
+
+async function
+The async function defines an async function expression.
+
+await
+Pause and resume an async function and wait for the promise's resolution/rejection.
+
+[]
+Array initializer/literal syntax.
+
+{}
+Object initializer/literal syntax.
+
+/ab+c/i
+Regular expression literal syntax.
+
+( )
+Grouping operator.
+
+Left-hand-side expressions
+Left values are the destination of an assignment.
+
+Property accessors
+Member operators provide access to a property or method of an object (object.property and object["property"]).
+
+new
+The new operator creates an instance of a constructor.
+
+new.target
+In constructors, new.target refers to the constructor that was invoked by new.
+
+import.meta
+An object exposing context-specific metadata to a JavaScript module.
+
+super
+The super keyword calls the parent constructor.
+
+...obj
+Spread syntax allows an expression to be expanded in places where multiple arguments (for function calls) or multiple elements (for array literals) are expected.

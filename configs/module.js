@@ -4,6 +4,8 @@
  * Website : www.matadeveloper.com
  * Email   : kharismamaulana1@gmail.com
 */
+'use strict';
+
 const express          = require("express")
 const dotenv           = require("dotenv")
 const bodyParser       = require("body-parser")
@@ -14,6 +16,14 @@ const { EventEmitter } = require("stream")
 const path             = require("path")
 const Sequelize        = require("sequelize")
 const cors             = require("cors")
+const Multer           = require("multer") // handle multipart-form data
+const Datetime         = require("node-datetime")
+/* Graphql */
+const ExpressGraphql   = require("express-graphql")
+const Graphql          = require("graphql")
+const { v4: uuidv4 }   = require('uuid');
+const Sharp            = require("sharp")
+
 
 class Module {
     constructor(app){
@@ -25,10 +35,12 @@ class Module {
     }
     bodyParser(){
         const {app} = this
-        app.use(bodyParser.urlencoded({ extended: false }))
-        app.use(bodyParser.json({ type: 'application/*+json' }))
-        app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
-        app.use(bodyParser.text({ type: 'text/html' }))
+        app.use(bodyParser.json())
+        app.use(bodyParser.urlencoded({ extended: true }))
+        // app.use(bodyParser.urlencoded({ extended: false }))
+        // app.use(bodyParser.json({ type: 'application/*+json' }))
+        // app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
+        // app.use(bodyParser.text({ type: 'text/html' }))
     }
     morgan(){
         const {app} = this
@@ -40,6 +52,24 @@ class Module {
     }
     jwt(){
         return jsonwebtoken
+    }
+    multer(){
+        return Multer
+    }
+    uuidv4(){
+        return uuidv4
+    }
+    sharp(){
+        return Sharp
+    }
+    datetime(){
+        return Datetime
+    }
+    expressGraphql(){
+        return ExpressGraphql
+    }
+    graphql(){
+        return Graphql
     }
     cors(){
         const {app} = this

@@ -4,19 +4,24 @@
  * Website : www.matadeveloper.com
  * Email   : kharismamaulana1@gmail.com
 */
-module.exports = (sequelize, Sequelize) => {
-    const User = sequelize.define("users", {
+module.exports = (sequelize, Sequelize, Model, DataTypes) => {
+    const User = sequelize.define("user", {
         id : {
-            type : Sequelize.INTEGER,
+            type : DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
         nickName : {
-            type : Sequelize.STRING
+            type : DataTypes.STRING
         },
         fullName : {
-            type : Sequelize.STRING
+            type : DataTypes.STRING
+        },
+        images : {
+            type : DataTypes.STRING
         }
+    },{
+        tableName : 'user' // setting table name
     })
 
     return User

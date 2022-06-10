@@ -4,10 +4,10 @@
  * Website : www.matadeveloper.com
  * Email   : kharismamaulana1@gmail.com
 */
-
+'use strict';
 // deskripsikan semua route didalam sini
 const { HomeRoute } = require('routes/home/home.route')
-const { ResultUserRoute } = require('routes/user/result.user')
+const { ResultUserRoute } = require('routes/user/user')
 // const { AboutRoute } = require('routes/home/about.route')
 
 class Route{
@@ -16,7 +16,10 @@ class Route{
 
             //init home route
             new HomeRoute().route(),
+
+            // For Model User
             new ResultUserRoute().route(),
+            new ResultUserRoute().routeCreate(),
         ]
     }
 }

@@ -21,7 +21,7 @@ module.exports = (req, res, next) => {
         /* check token is ready */
         const decode = jwt.verify(token, process.env.JWT_SECRET)
         if(decode){
-            console.log(decode.foo)
+            // console.log(decode.foo)
             next()
         }else{
             msg.error(401, {
