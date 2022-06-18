@@ -127,3 +127,9 @@ Moment Use To Create Date & Showing Date
 Ref : https://momentjs.com/
 install
 npm install moment --save
+
+#Installation babel
+babel-node is a CLI that works exactly the same as the Node.js CLI, with the added benefit of compiling with Babel presets and plugins before running it.
+https://babeljs.io/docs/en/babel-node
+install
+npm install --save-dev @babel/core @babel/node
