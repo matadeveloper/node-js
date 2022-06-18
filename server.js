@@ -18,6 +18,7 @@ const TZ       = require('set-tz')
 
 var { graphqlHTTP } = new Module().expressGraphql()
 var { buildSchema } = new Module().graphql()
+var moment = new Module().moment()
 
 const errorHandler = (error, request, response, next) => {
 // Error handling middleware functionality
@@ -26,7 +27,6 @@ const status = error.status || 400
 // send back an easily understandable error message to the caller
 response.status(status).send(error.message)
 }
-
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
@@ -88,14 +88,13 @@ class App extends Route{
 
             // set timezone
             // process.env.TZ = 'Asia/Makassar'
-            // console.log(new Date().toString())
+            // console.log(moment().format('MMMM Do YYYY, h:mm:ss a'))
 
             app.engine('html', require('ejs').renderFile);
             app.set('views', __dirname + '/views');
             app.set('view engine', 'ejs');
             // listenint server port
             http.createServer(app).listen(process.env.PORT)
-            // console.log('Listen Port '+process.env.PORT)
         }
     }
 }

@@ -120,3 +120,10 @@ For the creation of RFC4122 UUIDs
 https://www.npmjs.com/package/uuid
 install
 npm install uuid --save
+
+#Installation moment
+It is not our differences that divide us. It is our inability to recognize, accept, and celebrate those differences
+Moment Use To Create Date & Showing Date
+Ref : https://momentjs.com/
+install
+npm install moment --save

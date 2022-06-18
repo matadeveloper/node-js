@@ -23,6 +23,7 @@ const ExpressGraphql   = require("express-graphql")
 const Graphql          = require("graphql")
 const { v4: uuidv4 }   = require('uuid');
 const Sharp            = require("sharp")
+const Moment           = require("moment")
 
 
 class Module {
@@ -44,7 +45,7 @@ class Module {
     }
     morgan(){
         const {app} = this
-        app.use(logger('dev'))
+        app.use(logger('combined'))
     }
     event(){
         const events = new EventEmitter()
@@ -55,6 +56,9 @@ class Module {
     }
     multer(){
         return Multer
+    }
+    moment(){
+        return Moment
     }
     uuidv4(){
         return uuidv4
