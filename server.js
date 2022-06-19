@@ -15,6 +15,7 @@ const {app}    = require('./app')
 const {Route}  = require('./core/route')
 const {Module} = require('configs/module')
 const TZ       = require('set-tz')
+const {Logger}   = require('helpers/logger')
 
 var { graphqlHTTP } = new Module().expressGraphql()
 var { buildSchema } = new Module().graphql()
@@ -79,6 +80,9 @@ class App extends Route{
             }else{
                 app.use(errorHandler);
             }
+
+            // call logger log4js
+            new Logger('error', 'Data error').call()
 
             app.use('/graphql', graphqlHTTP({
                 schema: schema,

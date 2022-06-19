@@ -17,5 +17,6 @@ mod.cors()
 mod.morgan()
 mod.assets()
 mod.event()
+mod.log4js()
 
 module.exports = {app}

@@ -23,7 +23,7 @@ to run : npm run dev , and for resresh used : rs+enter
 
 #installing body-parser
 Body-parser is a middleware. They help to tidy up the request object before we use them. Express lets us use middleware with the use method
-https://www.npmjs.com/package/body-parser
+https://www.npmjs.com/package/body-parsernpm install log4js --save
 npm install body-parser --save
 
 #installing eslint
@@ -131,5 +131,11 @@ npm install moment --save
 #Installation babel
 babel-node is a CLI that works exactly the same as the Node.js CLI, with the added benefit of compiling with Babel presets and plugins before running it.
 https://babeljs.io/docs/en/babel-node
-install
+installing
 npm install --save-dev @babel/core @babel/node
+
+#Installation log4js
+This is a conversion of the log4js framework to work with node. I started out just stripping out the browser-specific code and tidying up some of the javascript to work better in node
+https://www.npmjs.com/package/log4js
+install
+npm install log4js --save

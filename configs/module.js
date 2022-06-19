@@ -24,6 +24,7 @@ const Graphql          = require("graphql")
 const { v4: uuidv4 }   = require('uuid');
 const Sharp            = require("sharp")
 const Moment           = require("moment")
+const Log4js           = require("log4js");
 
 
 class Module {
@@ -59,6 +60,9 @@ class Module {
     }
     moment(){
         return Moment
+    }
+    log4js(){
+        return Log4js
     }
     uuidv4(){
         return uuidv4
