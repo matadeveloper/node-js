@@ -57,21 +57,26 @@ class ResultUserController{
       const datetime = new Module().datetime()
       const dt       = datetime.create()
       var formatted  = dt.format('Y-m-d H:M:S');
+      // Get data input
+      const {nickName, fullName} = req.body
       // console.log(dateFormatSql)
-      if(!req.body.nickName){
+      if(!nickName){
           return new customMessage(res).success(400, {
               response: {
                 message: 'nickName can not be empty',
               }
           })
       }
-      if(!req.body.fullName){
+      if(!fullName){
           return new customMessage(res).success(400, {
               response: {
                 message: 'fullName can not be empty',
               }
           })
       }
+
+      /* check nickName */
+      var checkName = User.findOne()
 
       /* check file */
       if(!fs.existsSync('public/uploads/user')){
@@ -89,8 +94,8 @@ class ResultUserController{
       const fileName = fileUpload.save(req.file.buffer);
       // console.log(fileName)
       const dataUser = {
-          nickName : req.body.nickName,
-          fullName : req.body.fullName,
+          nickName : nickName,
+          fullName : fullName,
           images   : fileName
       }
 

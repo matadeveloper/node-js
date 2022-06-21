@@ -1,0 +1,2 @@
+Set in package.json under main with :
+"type": "module"

@@ -12,7 +12,7 @@ const moment = mod.moment()
 
 const dateNow = moment().format("DD_MM_YYYY")
 log4js.configure({
-    appenders: { cheese: { type: "file", filename: `./log/log_${dateNow}.log` } },
+    appenders: { cheese: { type: "file", filename: `./logs/log_${dateNow}.log` } },
     categories: { default: { appenders: ["cheese"], level: "error" } }
 });
 const logger = log4js.getLogger("cheese");
